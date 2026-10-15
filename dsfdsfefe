@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+      <script src="script.js"></script>
+  </body>
+</html>
+
+.ball
+{
+  background-color: red;
+  width: 250px;
+  height: 250px;
+  margin: auto;
+  border-radius: 50%;
+  display: flex;
+}
+.button
+{
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  color: white;
+  font-size: 200%;
+}
+
+function magicBall()
+{
+    const ball = document.createElement('div');
+    ball.className = "ball";
+    
+
+    let button = document.createElement('button');
+    button.className = "button";
+    button.textContent = "Click me";
+    ball.onclick = function( ) {
+  const arrayAnswers = Array("yes", "no", "maybe", "perchance");
+  let choice = Math.random() * 4;
+  alert(arrayAnswers[Math.floor(choice)]);
+};
+    ball.appendChild(button)
+    document.body.appendChild(ball);
+}
+
+
+
+magicBall()
